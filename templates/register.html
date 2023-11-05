@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}ثبت نام{% endblock %}
+
+{% block content %}
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        <p>{{ form.as_p }}</p>
+        <input type="submit" value="ثبت کاربر جدید">
+    </form>
+{% endblock %}

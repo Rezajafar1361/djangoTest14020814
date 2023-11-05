@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}صفحه اول{% endblock %}
+
+{% block content %}
+    {% for todo in todos %}
+        <h3>
+            <a href="{% url 'details' todo.id %}">{{ todo.title }}</a>
+        </h3>
+    {% endfor %}
+{% endblock %}
